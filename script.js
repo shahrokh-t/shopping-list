@@ -18,7 +18,7 @@ const onAddItemSubmit = (e) => {
   const newItem = itemInput.value;
 
   // Validate input
-  if (newItem === "") {
+  if (newItem.trim() === "") {
     alert("Please add an item");
     return;
   }
@@ -31,6 +31,11 @@ const onAddItemSubmit = (e) => {
     itemToEdit.classList.remove("edit-mode");
     itemToEdit.remove();
     isEditMode = false;
+  } else {
+    if (checkIfItemExists(newItem)) {
+      alert("Thiat item already exists");
+      return;
+    }
   }
 
   // Create item DOM element
@@ -99,6 +104,11 @@ const onClickItem = (e) => {
   } else {
     setItemToEdit(e.target);
   }
+}
+
+const checkIfItemExists = (item) => {
+  const itemsFromStorage = getItemsFromStorage();
+  return itemsFromStorage.includes(item);
 }
 
 const setItemToEdit = (item) => {
