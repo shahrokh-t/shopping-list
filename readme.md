@@ -1,7 +1,4 @@
 # Shopping List
-
-Vanilla JavaScript shopping list app from Brad Traversy's "Modern JS From The Beginning" course.
-
-This project was created to focus on working with the DOM, events, state, local storage and other fundamentals of JavaScript.
-
-<img src="images/screen.png" width="400">
+This project has been done as a practice while coding along Brad Traversy in his fantastic JavasSript Course:
+- https://www.udemy.com/course/modern-javascript-from-the-beginning/
+- https://www.traversymedia.com/modern-javascript-2-0
